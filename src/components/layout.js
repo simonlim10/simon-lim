@@ -10,9 +10,13 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
+import Hero from "./hero"
+import Transition from './Transition';
 
-const Layout = ({ children }) => (
+import '../../node_modules/@fortawesome/fontawesome-free/css/all.css'; 
+import categDev from "../images/categ-dev.png"
+
+const Layout = ({ children, location }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -26,20 +30,27 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
+        <div className="laymain-container">
+          <main>
+            {children}
+          </main>
+
           <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+
+            <div className="left-section">
+              Hope you liked it! 
+            </div>
+
+            <div className="space-between"></div>
+
+            <div className="right-section">
+              <a href="/" className="footer-logo">
+                <img src={categDev} /> simon-lim
+              </a>
+            </div>
+
           </footer>
+
         </div>
       </>
     )}

@@ -1,0 +1,379 @@
+//before font was switched around etc.
+
+@import "mystyles.scss";
+
+.clear-both {
+  clear:both;
+  margin-bottom: 0px;
+}
+
+main {
+  overflow: auto;
+}
+
+body {
+  // font-family: "Gothic A1", "Helvetica Neue", Arial, sans-serif;
+  background-color: #f3f3f3;
+}
+
+/* NAV styling */ 
+.nav {
+  height: 80px;
+  
+  .navbar {
+    height: 80px;
+  }
+  .left-background {
+    height: inherit;
+    width: 50%;
+    background-color: #f9f9f9;
+
+    position: absolute;
+    left: 0;
+  }
+  .right-background {
+    height: inherit;
+    width: 50%;
+    background-color: #fff;
+
+    position: absolute;
+    right: 0;
+  }
+  
+  .left-section {
+    background-color: #f9f9f9;
+    
+    .logo-wrapper {
+      padding: 0 80px 0 30px;
+
+      // font-family: "Gothic A1", "Helvetica Neue", Arial, sans-serif;
+      font-size: 1.5rem;
+      color: #363636;
+      font-weight: 600;
+      line-height: 1.125;
+    }
+
+    .navbar-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      
+      span, a, img {
+        max-height: none; /* override bulma */
+        margin-bottom: 0; /* override bulma */
+
+        height: calc(100% - 36px);
+        width: auto;
+        margin: 18px; 
+
+        opacity: 1;
+        transition: 0.3s;
+        &:hover {
+          opacity: 0.8;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+  .right-section {
+    background-color: #fff;
+    
+    border-bottom-left-radius: .35rem;
+  }
+}
+
+
+/* other elements */ 
+.button {
+  background-color: rgba(51,51,51, 0.7);
+  color: white;
+  font-weight: 700;
+  padding: 1rem;
+  text-transform: uppercase;
+
+  transition: all 0.4s ease;
+  &:hover {
+    background-color: rgba(51,51,51, 0.9);
+
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+}
+
+.gatsby-image-wrapper {
+  position: relative; 
+  overflow: hidden;
+}
+
+.large-badge {
+  display: inline-block; overflow: hidden; background: url(&quot;//linkmaker.itunes.apple.com/assets/shared/badges/en-us/macappstore-lrg.svg&quot;) 0% 0% / contain no-repeat; width: 205px; height: 60px;
+}
+
+
+.hero-banner-custom {
+  height: 32vh;
+  margin-top: 50px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.categories {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .category {
+    height: 250px;
+    width: 250px;
+    margin: 80px 10px;
+
+    font-size: 20px;
+    // font-family: "Gothic A1", "Helvetica Neue", Arial, sans-serif;
+    text-align: center; 
+
+    .category-name {
+      height: 80px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      h4 {
+        font-size: 28px;
+        // font-family: "Gothic A1", "Helvetica Neue", Arial, sans-serif;
+        text-align: center;
+        font-weight: 500;
+        color: #333333;
+      }
+    }
+  }
+
+  .category-icon {
+    width: 100%;
+    height: auto;
+
+      opacity: 1;
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.6;
+        transition: 0.3s;
+      }
+
+    img {
+      width: 70%;
+      height: auto;
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.hero {
+  color: #555;
+}
+
+.suggestions {
+  width: 100%;
+  height: auto;
+  margin-bottom: 80px;
+
+  display: inline-block;
+  // justify-content: center;
+  // align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  font-size: 28px;
+  // font-family: "Gothic A1", "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+  font-weight: 400;
+
+  a {
+    color: #555;
+  }
+
+  .suggestion-card {
+    height: auto;
+    width: 160px;
+    margin: 10px;
+    padding: 15px 14px;
+
+    // font-family: "Gothic A1", "Helvetica Neue", Arial, sans-serif;
+    text-align: left; 
+
+
+    // padding-bottom: .5rem!important;
+    // padding-top: .5rem!important;
+    // height: 100%!important;
+    // -webkit-box-shadow: 0 .01rem 0.75rem 0 rgba(58,59,69,.05)!important;
+    // box-shadow: 0 3px 0.25rem 0 rgba(58,59,69,.05)!important;
+
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: .35rem;
+    
+    transition: 0.3s;
+    &:hover {
+      background-color: #f9f9f9;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    
+    .suggestion-icon {
+      margin: 5px 15px 20px 15px;
+      opacity: 0.10;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        margin-bottom: 0;
+      }
+    }
+
+    h4 {
+      margin-bottom: 5px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    h5 {
+      font-size: 15px;
+      font-weight: 400;
+      margin-bottom: 0px;
+    }
+  }
+
+}
+
+
+
+/* PRESENTATION styling */ 
+.presentation {
+  height: 520px;
+  width: 100%;
+  margin: 40px 0 50px 0;
+
+  // font-family: "Gothic A1", "Helvetica Neue", Arial, sans-serif;
+  position: relative;
+
+  text-align: left; 
+  min-width: 0;
+  word-wrap: break-word;
+
+  // padding-bottom: .5rem!important;
+  // padding-top: .5rem!important;
+  // height: 100%!important;
+  // -webkit-box-shadow: 0 .01rem 0.75rem 0 rgba(58,59,69,.05)!important;
+  // box-shadow: 0 3px 0.25rem 0 rgba(58,59,69,.05)!important;
+
+
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: .35rem;
+
+  display: flex;
+  flex-direction: row;
+
+  
+  .presentation-info {
+
+    background-color: #f9f9f9; /*temp*/
+
+    height: 100%;
+    flex: 1;
+    padding: 15px 14px;
+    padding: 20px;
+    padding-right: 30px;
+
+    border-top-left-radius: .35rem;
+    border-bottom-left-radius: .35rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-basis: 0;
+    align-items: stretch;
+
+    h4 {
+      margin-bottom: 5px;
+
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    h5 {
+      margin-bottom: 8px;
+
+      font-size: 15px;
+      font-weight: 400;
+    }
+
+    .presentation-title {
+      .presentation-icon {
+        max-width: 90px;
+        margin: 5px 15px 20px 0px;
+        opacity: 0.10;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+          height: auto;
+          margin-bottom: 0;
+        }
+      }
+    }
+    
+    .presentation-space {
+      flex: 1;
+    }
+
+    .presentation-description {
+      
+    }
+
+  }
+
+  .presentation-display {
+    height: 100%;
+    flex: 3;
+    // background-color: #fcfcfc;
+    background-size: contain; 
+
+    border-top-right-radius: .35rem;
+    border-bottom-right-radius: .35rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+      max-width: 100%;
+
+      object-fit: cover;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+
+}
+
