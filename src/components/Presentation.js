@@ -31,6 +31,7 @@ const Presentation = ({ presentationName, presentationType, presentationDescript
 
     </div>
 
+    <div class="clear-both"></div>
 
     <div className="presentation-display">
       <img src={presentationImage} />

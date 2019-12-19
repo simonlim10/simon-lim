@@ -17,7 +17,7 @@ const GallerySec = ({ discussHeading, discussContent, discussContent2, discussIm
 
     <div className={"inner-gallery-images " + ImageSide}>
 
-      <Gallery  images={discussImage} 
+      <Gallery images={discussImage} 
                 enableImageSelection={false} 
                 showLightboxThumbnails={true} 
                 rowHeight={120} 

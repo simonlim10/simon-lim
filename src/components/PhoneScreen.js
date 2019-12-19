@@ -15,11 +15,11 @@ const PhoneScreen = ({ discussImage }) => (
 
       <div className="images">
         <Gallery images={discussImage} 
-                      enableImageSelection={false} 
-                      showLightboxThumbnails={true} 
-                      rowHeight={200} 
-                      columnWidth={140} 
-                      margin={7} 
+                  enableImageSelection={false} 
+                  showLightboxThumbnails={true} 
+                  rowHeight={200} 
+                  columnWidth={140} 
+                  margin={7} 
         />
       </div>
 
