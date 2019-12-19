@@ -65,7 +65,7 @@ body {
 .hero-highlight {
   padding: 1px 9px;
   margin-bottom: 4px;
-  background-color: #d0d0d0;
+  background-color: #cccaca;
   border-radius: 3px;
   color: #fff;
 }
@@ -503,6 +503,10 @@ footer {
     margin-top: 30px;
   }
 
+  .hero-body {
+    padding: 3rem 0.8rem;
+  }
+
   //for HeroText.js Component
   h2.title {
     color: $text-darkest-grey; /* was 363636 then 444 */
@@ -593,7 +597,7 @@ footer {
       width: 70%;
       height: auto;
       margin-bottom: 12px;
-      
+
       opacity: 0.15;
     }
   }
