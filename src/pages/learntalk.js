@@ -16,31 +16,31 @@ import WalkthroughVideo from "../images/learntalk/walkthrough.mp4"
 import "../styles/site.scss"
 
 
-const LearntalkColors =
-[{
+const LearntalkColors = [
+  {
     hex: "#1C3D49",
     name: "dark blue"
-},
-{
+  },
+  {
     hex: "#00ADF0",
     name: "learntalk blue"
-},
-{
+  },
+  {
     hex: "#41CED9",
     name: "bluegreen"
-},
-{
+  },
+  {
     hex: "#FD5C63",
     name: "red"
-},
-{
+  },
+  {
     hex: "#FCBF69",
     name: "orange"
-},
-{
+  },
+  {
     hex: "#BAD16E",
     name: "green"
-}
+  }
 ]
 
 const IllustrationsImages =
@@ -204,95 +204,84 @@ const KidsImages =
 }]
 
 
-class Unphone extends React.Component {
-  constructor(props) {
-    super(props);
 
-  }
+const Learntalk = () => (
+  <React.Fragment>
+    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
-  render() {
-    return (
-      <React.Fragment>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <div className="clear-both" />
 
-        <div className="clear-both" />
+    <div className="container-max-width">
 
-        <div className="container-max-width">
+      <Presentation presentationName="Learntalk" 
+                    presentationType="Web UI / Design"
+                    presentationDescription="My work with a startup online English learning platform that focuses on providing the best English lessons from professional native-speaking English teachers all over the world." 
+                    presentationImage={LearntalkLogo} 
+      />
 
-          <Presentation presentationName="Learntalk" 
-                        presentationType="Web UI / Design"
-                        presentationDescription="My work with a startup that runs an online English learning platform that focuses on providing the best English lessons from professional native-speaking English teachers all over the world." 
-                        presentationImage={LearntalkLogo} 
-          />
+    </div>
 
-        </div>
+    <CenterText centerHeading="Design Goals: To make studying English a fun experience"
+                centerContent={`Usually, studying is correlated with long hours of reading and learning that requires your full focus and energy, and can seem a tiring and gruelling task which may discourage people. We designed the core of the platform's approach to be fun and friendly, so to make users feel that studying English is enjoyable.`}
+                centerContent2={``}
+    />
 
-        <CenterText centerHeading="Design Goals: Make language learning an enjoyable experience"
-                    centerContent={`Usually, learning is correlated with long hours of reading and studying, which can seem a tiring task, and can be very discouraging for people. That's why we want to design the platform to be fun, so to make users feel that learning is actually enjoyable.`}
-                    centerContent2={``}
-        />
+    <div className="container-max-width">
 
-        <div className="container-max-width">
+      <ColorPalette colorList={LearntalkColors} />
 
-          <ColorPalette colorList={LearntalkColors} />
+      <VideoPresentation  videoHeading="Video Walkthrough"
+                          videoContent="This is the main walkthrough, designed to give first time users a quick and sufficient idea what they can do in the dashboard."
+                          videoPoster="images/learntalk/video-thumb.jpg"
+                          videoUrl={WalkthroughVideo}
+      />
 
-          <VideoPresentation  videoHeading="Video Walkthrough"
-                              videoContent="This is the main walkthrough, designed to give first time users a quick and sufficient idea what they can do in the dashboard."
-                              videoPoster="images/learntalk/video-thumb.jpg"
-                              videoUrl={WalkthroughVideo}
-          />
+      <GallerySec discussHeading="Corporate Dashboard"
+                  discussContent={`Learntalk provides B2B services also to companies who need to bring English lessons to their workforce.`}
+                  discussContent2={`With this, businesses need to see simple, easy-to-understand metrics to see the improvements of their people as they progress in learning English with Learntalk.`}
+                  discussImage={CorpImages}
+                  ImageSide="left"
+      />
 
-          <GallerySec discussHeading="Corporate Dashboard"
-                      discussContent={`Learntalk provides B2B services also to companies who need to bring English lessons to their workforce.`}
-                      discussContent2={`With this, businesses need metrics to see the improvements of their people as they progress in learning English with Learntalk.`}
-                      discussImage={CorpImages}
-                      ImageSide="left"
-          />
+      <GallerySec discussHeading="Chart Design"
+                  discussContent={`Due to how English can get very complex to teach, we wanted to simplify it into lesson steps for users. \n Turning info into visuals help people absorb it easier.`}
+                  discussContent2={`In this case, we create designs to show how a True Beginner (like a child) would progress into English fluency.`}
+                  discussImage={KidsImages}
+                  ImageSide="right"
+      />
 
-          <GallerySec discussHeading="Chart Design"
-                      discussContent={`Due to how English can get very complex to teach, there have been times that we need to organize big sets of information.`}
-                      discussContent2={`In this case, we create designs to show how a True Beginner (like a child) would progress into English fluency.`}
-                      discussImage={KidsImages}
-                      ImageSide="right"
-          />
+      <GallerySec discussHeading="Checkout & Other Forms"
+                  discussContent={`Incorporating friendly elements into the checkout form would help create less tension or nervousness around payment process. Also, we don't leave out the standard elements that are important, that users look out for.`}
+                  discussImage={CheckoutImages}
+                  ImageSide="left"
+      />
 
-          <GallerySec discussHeading="Checkout & Other Forms"
-                      discussContent={`Incorporating friendly elements into the checkout form would help create less tension or nervousness around payment process. Also, we don't leave out the standard elements that are important, that users look out for.`}
-                      discussContent2={``}
-                      discussImage={CheckoutImages}
-                      ImageSide="left"
-          />
+      <GallerySec discussHeading="UI Elements"
+                  discussContent={`Various elements that are designed to make a seamless experience across different features and user experiences.`}
+                  discussImage={UIImages}
+                  ImageSide="right"
+      />
 
-          <GallerySec discussHeading="UI Elements"
-                      discussContent={`Various elements that are designed to make a seamless experience across different features and user experiences.`}
-                      discussContent2={``}
-                      discussImage={UIImages}
-                      ImageSide="right"
-          />
+      <GallerySec discussHeading="Page Design"
+                  discussContent={`As per usual in development process, we would design the pages first to quickly explore the content & ideas on how we would creatively present an idea or a product to users.`}
+                  discussImage={PageImages}
+                  ImageSide="left"
+      />
 
-          <GallerySec discussHeading="Page Designs"
-                      discussContent={`When a new service was to be offered, we would design the pages first to see how we would present it to the user.`}
-                      discussContent2={``}
-                      discussImage={PageImages}
-                      ImageSide="left"
-          />
+      <GallerySec discussHeading="Illustrations"
+                  discussContent={`Reusing existing elements and assets that we already had, we came up with new banners to use for several E-mail marketing campaigns. \n 
+                    Credits: Some icons and vector illustrations reused were done by other designers in the Learntalk team.`}
+                  discussImage={IllustrationsImages}
+      />
 
-          <GallerySec discussHeading="Illustrations"
-                      discussContent={`Reusing existing elements and assets that we already had, we came up with new banners to use for several E-mail marketing campaigns.`}
-                      discussContent2={``}
-                      discussImage={IllustrationsImages}
-          />
+      <FinalOutput 
+      />
 
-          <FinalOutput 
-          />
+      <Suggestions />
 
-          <Suggestions />
+    </div>
 
-        </div>
+  </React.Fragment>
+)
 
-      </React.Fragment>
-    )
-  }
-}
-
-export default Unphone
+export default Learntalk

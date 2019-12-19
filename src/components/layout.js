@@ -38,7 +38,7 @@ const Layout = ({ children, location }) => (
           <footer>
 
             <div className="left-section">
-              Hope you liked it! 
+              Let's make the complicated simple. 
             </div>
 
             <div className="space-between"></div>

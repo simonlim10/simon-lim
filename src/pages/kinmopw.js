@@ -31,66 +31,58 @@ const PackageImages =
 }]
 
 
-class KinmoPW extends React.Component {
-  constructor(props) {
-    super(props);
 
-  }
+const KinmoPW = () => (
+  <React.Fragment>
+    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
-  render() {
-    return (
-    <React.Fragment>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <div className="clear-both" />
 
-      <div className="clear-both" />
+    <div className="container-max-width">
 
-      <div className="container-max-width">
+      <Presentation presentationName="KinmoPW" 
+                    presentationType="Graphic Design"
+                    presentationDescription="My work with a local electronics distributing company that supplies a wide variety of personal and technical electronics & applications to over hundreds of consumer hardware stores across the nation." 
+                    presentationImage={KPWIllustration} 
+      />
 
-        <Presentation presentationName="KinmoPW" 
-                      presentationType="Graphic Design"
-                      presentationDescription="My work with a local electronics distributing company that supplies a wide variety of personal and technical electronics & applications to over hundreds of consumer hardware stores across the nation." 
-                      presentationImage={KPWIllustration} 
-        />
+    </div>
 
-      </div>
+    <div className="clear-both" />
 
-      <div className="clear-both" />
+    <div className="inner-studies-fullwidth">
 
-      <div className="inner-studies-fullwidth">
+      <CenterText centerHeading="Design Goal: User-friendly electronics"
+                  centerContent={`Electrical tools and modern appliances can be complicated to use, but there can be many conveniences to be taken advantage of for any person.`}
+                  centerContent2={`With the use of user-friendly graphics and easy to read instructions, the designs aim to make electronics much simpler for people to use them and be part of their daily lives.`}
+      />
 
-        <CenterText centerHeading="Design Goal: User-friendly electronics"
-                    centerContent={`Electrical tools and modern appliances can be complicated to use, but there can be many conveniences to be taken advantage of for any person.`}
-                    centerContent2={`With the use of user-friendly graphics and easy to read instructions, the designs aim to make electronics much simpler for people to use them and be part of their daily lives.`}
-        />
+    </div>  
 
-      </div>  
+    <div className="container-max-width">
 
-      <div className="container-max-width">
+      <DiscussSection discussHeading="Vector Illustration"
+                      discussContent="Creating intuitive and simple graphics to better explain how electronics operate and how to use them are important. The more users have a good understanding of the product, the more they will enjoy and maximize the use."
+                      discussImage={KPWIllustration}
+      />
 
-        <DiscussSection discussHeading="Vector Illustration"
-                        discussContent="Creating intuitive and simple graphics to better explain how electronics operate and how to use them are important. The more users have a good understanding of the product, the more they will enjoy and maximize the use."
-                        discussImage={KPWIllustration}
-        />
+      <GallerySec discussHeading="Package Design"
+                  discussContent={`A few samples of package design, created for different branding and models.`}
+                  discussImage={PackageImages}
+                  ImageSide="left"
+      />
 
-        <GallerySec discussHeading="Package Design"
-                    discussContent={`A few samples of package design, created for different branding and models.`}
-                    discussImage={PackageImages}
-                    ImageSide="left"
-        />
+      <FinalOutput finalHeading="Newsletter Design"
+                      finalContent="From the photography down to the layout design, conceptualized is a piece that highlights the Halogen bulb type Emergency light."
+                      finalImage={KPWNewsletter}
+      />
 
-        <FinalOutput finalHeading="Newsletter Design"
-                        finalContent="From the photography down to the layout design, conceptualized is a piece that highlights the Halogen bulb type Emergency light."
-                        finalImage={KPWNewsletter}
-        />
+      <Suggestions />
+      
+    </div>
 
-        <Suggestions />
-        
-      </div>
-
-    </React.Fragment>
-    )
-  }
-}
+  </React.Fragment>
+)
 
 
 export default KinmoPW

@@ -40,110 +40,55 @@ const PreviewImages =
 
 }]
 
+const Unitan = () => (
+  <React.Fragment>
+    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
-class Unitan extends React.Component {
-  constructor(props) {
-    super(props);
+    <div className="clear-both" />
 
-    this.scroller = React.createRef();
+    <div className="container-max-width">
 
-    this.onClickLeftscroll = this.onClickLeftscroll.bind(this);
-    this.onClickRightscroll = this.onClickRightscroll.bind(this);
-  }
+      <Presentation presentationName="UNITAN" 
+                    presentationType="Identity Design"
+                    presentationDescription="A construction company based in Metro Manila, where I was commissioned to update their corporate branding's style and image to have a more modern and strong presence." 
+                    presentationImage={PresentationImage} 
+      />
 
-  onClickLeftscroll() {
-    let currentleft = this.scroller.current.scrollLeft;
-    this.scroller.current.scrollTo({
-        left: currentleft - 690,
-        behavior: 'smooth'
-      });
-  }
+    </div>
 
-  onClickRightscroll() {
-    let currentleft = this.scroller.current.scrollLeft;
-    this.scroller.current.scrollTo({
-        left: currentleft + 690,
-        behavior: 'smooth'
-      });
-  }
+    <div className="clear-both" />
 
-  scrollToRef(ref) {
-   window.scrollTo(0, ref.current.offsetTop) // General scroll to element function
-  } 
+    <div className="inner-studies-fullwidth">
+      <CenterText centerHeading="Design Goal: Update and modernize the branding"
+                  centerContent={``}
+                  centerContent2={`Upon having an initial meeting with the client, I facilitated a simple interview to get to know them, and to help them express what they wanted in the design. I would research for pegs of logos and design elements of how I visualize the logo should be. After some more discussions, I was then was able to create the initial look and feel.`}
+      />
+    </div>
 
+    <div className="container-max-width">
+      <FinalOutput finalHeading="Flattened + Realigned Logo"
+                      finalContent={`While we had to retain the original logo's form and concept, we were allowed to update the style: Remove unnecessary gradients and shadows to allow the logo to take a more minimal and flat design, and make the lines of the logo's angles & alignments more proportional. 
 
-  render() {
-    return (
-    <React.Fragment>
-      <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+                        With some discussion with the client about which elements and designs they liked best, we were able to finalize with this design.`}
+                      finalImage={UnitanFinal}
+      />
+      <DiscussSection discussHeading="Back Design"
+                      discussContent="For added effect, the back side was utilized as a space dedicated to the logo only. This gives more exposure to the logo and creates more impact for the company's identity."
+                      discussImage={CardBack}
+      />
+      <DiscussSection discussHeading="Front Design"
+                      discussContent="Since the client wanted a lot of information on the card, it was a challenge to fit it in the size of a business card. But it would still be possible with just some smart use of space."
+                      discussImage={CardFront}
+      />
+      <GallerySec discussHeading="Preview Designs"
+                  discussContent={`As an added study, previews were created for the client to properly visualize the design's entire aesthetic.`}
+                  discussImage={PreviewImages}
+                  ImageSide="left"
+      />
+      <Suggestions />
+    </div>
 
-
-      <div className="clear-both" />
-
-
-      <div className="container-max-width">
-
-        <Presentation presentationName="UNITAN" 
-                      presentationType="Identity Design"
-                      presentationDescription="A construction company based in Metro Manila, where I was commissioned to update their corporate branding and image to a more modern and strong presence." 
-                      presentationImage={PresentationImage} 
-        />
-
-      </div>
-
-
-      <div className="clear-both" />
-
-
-      <div className="inner-studies-fullwidth">
-        <CenterText centerHeading="Design Goal: Update and modernize the branding"
-                    centerContent={``}
-                    centerContent2={`Upon the initial meeting with the client, I facilitated a simple interview to get to know them, and to help them express what they wanted in the design. I would research for pegs of logos and design elements of how I visualize the logo should be. After some more discussions, I was then was able to create the initial look and feel.`}
-        />
-      </div>
-
-
-
-      <div className="container-max-width">
-
-
-        <FinalOutput finalHeading="Final Output"
-                        finalContent="With some discussion with the client about which elements and designs they liked best, we were able to finalize with this design."
-                        finalImage={UnitanFinal}
-        />
-
-
-        <DiscussSection discussHeading="Back Design"
-                        discussContent="For added effect, the back side was utilized as a space dedicated to the logo only. This gives more exposure to the logo and creates more impact for the company's identity."
-                        discussImage={CardBack}
-        />
-        
-
-        <DiscussSection discussHeading="Front Design"
-                        discussContent="Since the client wanted a lot of information on the card, it was a challenge to fit it in the size of a business card. But it would still be possible with just some smart use of space."
-                        discussImage={CardFront}
-        />
-
-
-        <GallerySec discussHeading="Preview Designs"
-                    discussContent={`As an added study, previews were created for the client to properly visualize the design's entire aesthetic.`}
-                    discussImage={PreviewImages}
-                    ImageSide="left"
-        />
-
-
-        <Suggestions />
-        
-
-      </div>
-
-
-    </React.Fragment>
-
-    )
-  }
-}
-
-// {["one", "two", "three"]}
+  </React.Fragment>
+)
 
 export default Unitan
