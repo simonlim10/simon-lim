@@ -8,5 +8,6 @@
   simon-lim.com
 </h1>
 
-My portfolio website, done in GatsbyJS.
-
+<p align="center">
+  My portfolio website, done in GatsbyJS.
+</p>
