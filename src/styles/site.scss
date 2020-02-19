@@ -463,6 +463,8 @@ footer {
   height: 32vh;
   min-height: 200px;
   margin-top: 30px;
+  
+  z-index: 2;
 
   display: flex;
   justify-content: flex-start;
@@ -488,6 +490,10 @@ footer {
     @media screen and (max-width: 480px) {
       font-size: 2rem !important;
     }
+  }
+
+  .hero { //needed for BannerAnimation.js to stay below
+    z-index: 10;
   }
 }
 
@@ -725,6 +731,15 @@ a .featured-work {
       padding-left: 0px;
 
       transition: 0.3s;
+
+      @at-root a .featured-work:hover {
+  
+       > .link-arrow {
+          padding-left: 15px;
+
+          transition: 0.3s;
+        }
+      }
     }
 
     .featured-work-title {
@@ -1939,20 +1954,21 @@ $resume-info-breakpoint: 680px; // unique breakpoint for .resume-info
   // height: 120px;
   min-width: 120px; /* because tiles would not prioritize to maintain a fixed width. even with wrap */
   margin: 0 10px 10px 0;
+  
+  background-color: white; 
+  border-radius: .35rem;
+
+  opacity: 1;
+  transition: 0.3s;
 
   img {
     height: 100%;
     width: 100%;
     object-fit: cover;
   }
-  
-  border-radius: .35rem;
-
-  opacity: 1;
-  transition: 0.3s;
 
   &:hover {
-    opacity: 0.8;
+    opacity: 0.5;
     transition: 0.3s;
   }
 }
@@ -2265,6 +2281,132 @@ $resume-info-breakpoint: 680px; // unique breakpoint for .resume-info
     }
   }
 }
+
+
+/* BannerAnimation.js */
+
+header.nav {
+  z-index: 10;
+}
+.laymain-container {
+  z-index: 10;
+}
+
+.banner-animation {
+  width: 100%;
+  height: 100vh;
+  min-height: 400px;
+  
+  position: relative;
+
+  .parallax-container {
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+    &::-webkit-scrollbar { /* WebKit */
+      width: 0;
+      height: 0;
+    }
+
+  }
+}
+
+//codesandBox code
+
+.onscroll-container {
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+
+  text-align: justify;
+  background: white;
+  color: lightpink;
+  font-size: 20em;
+  line-height: 0.9em;
+  font-weight: 800;
+  background: #f0f0f0;
+}
+
+.banner-containertwo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  text-align: justify;
+}
+
+svg {
+  pointer-events: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 70vw;
+  max-width: 600px;
+  transform-origin: 0% 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 10em;
+}
+
+.animated-dev {
+  pointer-events: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  transform-origin: 0% 0%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.console-log {
+  font-weight: normal;
+  font-size: 10px;
+}
+
+
+.masonry-with-columns {
+  width: 110%;
+  height: auto;
+  background: #fff; 
+
+  position: absolute;
+  top: 0;
+  
+  overflow: hidden;
+
+  columns: 4 200px;
+  column-gap: 1rem;
+
+  div {
+    width: 150px;
+    background: #eee;
+    color: white;
+    margin: 0 2rem 1.6rem 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-family: system-ui;
+    font-weight: 900;
+    font-size: 2rem;
+
+    border-radius: .35rem;
+  } 
+
+  @for $i from 1 through 36 { 
+    div:nth-child(#{$i}) {
+      $h: (random(400) + 100) + px;
+      height: $h;
+      line-height: $h;
+    }
+  }
+
+}
+
 
 
 

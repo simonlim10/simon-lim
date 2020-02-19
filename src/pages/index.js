@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
+import BannerAnimation from "../components/BannerAnimation"
 import Category from "../components/Category"
 import Hero from "../components/Hero"
 import HeroText from "../components/HeroText"
@@ -23,34 +24,21 @@ const IndexPage = () => (
   <React.Fragment>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
-    <div className="container-max-width">
-      
-      <Hero />
+        <div class="banner-animation">
 
-      <div className="categories">
-        <Category categoryName="Development" 
-                  categoryLink="dev" 
-                  categoryImage={categDev} 
-        />
-        <Category categoryName="Design & Identity" 
-                  categoryLink="design" 
-                  categoryImage={categDesign} 
-        />
-        <Category categoryName="Video & Animation" 
-                  categoryLink="video" 
-                  categoryImage={categVideo} 
-        />
-        <Category categoryName="Photography" 
-                  categoryLink="photo" 
-                  categoryImage={categPhoto} 
-        />
-      </div>
+          <BannerAnimation />
+
+          <Hero />
+
+        </div>
+
+    <div className="container-max-width">
 
       <div className="container-max-width py30">
         <HeroText chosenText="Here are my latest works." />
         <FeaturedWork workName="UnPhone" 
                       workType="App Design"
-                      workDescription="A small company I co-founded that gives rewards to students for locking their phones to focus in class. All the designs from mockup to UX is by me."
+                      workDescription="A startup I co-founded that gives rewards to students for locking their phones in class. All designs, from mockup to UX, is by me."
                       workImage={UnphoneMockup}
                       workLogo="/images/jobs/job-unphone.png"
                       workLink="unphone"
