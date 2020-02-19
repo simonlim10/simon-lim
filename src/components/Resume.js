@@ -24,6 +24,8 @@ const Resume = ({ presentationName }) => (
         <h3 className="tagline">Let's make the complicated simple.</h3>
         <h3 className="tagline">Learns constantly to build  designs & interfaces that people will love.</h3>
         <p> 
+          Frontend / UI development is what I like to do, and do best in. My background is mainly with design, and I can fill in exactly what you need when it comes to developing clear interfaces or well-designed webpages that presents in rich detail.
+
           Understands the importance of clear communication.&nbsp;&nbsp; 
           Pays attention to details of design and functionalities.&nbsp;&nbsp; 
           Social, and thrives in a team setting.&nbsp;&nbsp; 

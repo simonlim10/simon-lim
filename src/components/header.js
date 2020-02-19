@@ -85,10 +85,10 @@ class Header extends React.Component {
 
               <div className="navbar-dropdown is-hoverable">
                 <a href="/learntalk" className="navbar-item">
-                  Learntalk
+                  Learntalk - UI Dev. & Design
                 </a>
                 <a href="/unphone" className="navbar-item">
-                  Unphone
+                  Unphone - App Design
                 </a>
                 <a href="/unitan" className="navbar-item">
                   UNITAN

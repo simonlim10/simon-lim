@@ -215,13 +215,13 @@ const Learntalk = () => (
 
       <Presentation presentationName="Learntalk" 
                     presentationType="Web UI / Design"
-                    presentationDescription="My work with a startup online English learning platform that focuses on providing the best English lessons from professional native-speaking English teachers all over the world." 
+                    presentationDescription="My work with a startup online English learning platform that focuses on providing the best lessons from professional native-speaking English teachers all over the world." 
                     presentationImage={LearntalkLogo} 
       />
 
     </div>
 
-    <CenterText centerHeading="Design Goals: To make studying English a fun experience"
+    <CenterText centerHeading="Design Goals: To present studying English as a fun experience"
                 centerContent={`Usually, studying is correlated with long hours of reading and learning that requires your full focus and energy, and can seem a tiring and gruelling task which may discourage people. We designed the core of the platform's approach to be fun and friendly, so to make users feel that studying English is enjoyable.`}
                 centerContent2={``}
     />
