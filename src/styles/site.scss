@@ -463,6 +463,8 @@ footer {
   height: 32vh;
   min-height: 200px;
   margin-top: 30px;
+
+  text-align: left; 
   
   z-index: 2;
 
@@ -2319,12 +2321,26 @@ header.nav {
   height: 1000px;
 
   text-align: justify;
-  background: white;
-  color: lightpink;
   font-size: 20em;
   line-height: 0.9em;
   font-weight: 800;
-  background: #f0f0f0;
+}
+
+.hero-banner-container {
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.color-filter {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+
+  filter: invert(100%);
 }
 
 .banner-containertwo {
@@ -2335,19 +2351,9 @@ header.nav {
   text-align: justify;
 }
 
-svg {
-  pointer-events: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 70vw;
-  max-width: 600px;
-  transform-origin: 0% 0%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 10em;
+svg.svg-viewbox {
+  position: absolute;
+  top: 0;
 }
 
 .animated-dev {
@@ -2357,6 +2363,7 @@ svg {
   left: 50%;
   width: 150px;
   transform-origin: 0% 0%;
+  opacity: 0.13;
 
   display: flex;
   align-items: center;

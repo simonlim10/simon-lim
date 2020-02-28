@@ -24,13 +24,7 @@ const IndexPage = () => (
   <React.Fragment>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
-        <div class="banner-animation">
-
-          <BannerAnimation />
-
-          <Hero />
-
-        </div>
+    <BannerAnimation />
 
     <div className="container-max-width">
 
