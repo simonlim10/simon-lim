@@ -51,6 +51,7 @@ function BannerAnimation() {
     ({ currPos }) => {
       positionsStore.setViewportPosition(currPos);
       onScroll();
+      console.log("zaz st.value: " + `${(0.7 - (st.value / 500))}` );
     },
     [positionsStore],
     null,
@@ -68,18 +69,19 @@ function BannerAnimation() {
 
   const [nitbitzY, setNitbitzY] = useState(positionsStore.getViewportY());
   
-  //devnote1: had to put this in a curly bracket, something about "Too many renders. React puts a limit to rendering" 
-  const updateNitbit = () => {
-    setNitbitzY(positionsStore.getViewportY());
-    console.log("zaz updateNitbit constant positionsStore.getViewportY()" + positionsStore.getViewportY());
-  }
+  //devnote1: had to put this in a curly bracket, something about "Too many renders. React puts a limit to rendering"
+
+  // const updateNitbit = () => {
+  //   setNitbitzY(positionsStore.getViewportY());
+  //   console.log("zaz updateNitbit constant positionsStore.getViewportY()" + positionsStore.getViewportY());
+  // }
+
+  // const consoLog = () => { 
+  //   console.log("zaz window.scrollY:" + window.scrollY); 
+  //   console.log("zaz positionsStore.getViewportY(): " + positionsStore.getViewportY());
+  // }
 
   const [{ st, xy }, set] = useSpring(() => ({ st: 0, xy: [0, 0] }))
-  const consoLog = () => { 
-    console.log("zaz st:" + util.inspect(st)); 
-    console.log("zaz window:" + util.inspect(window)); 
-    console.log("zaz window.scrollTop:" + window.scrollY); 
-  }
 
   const interpBg = xy.interpolate((x, y) => `perspective(400px) rotateY(${x / 60}deg) rotateX(${-y / 60}deg) translate3d(-50%, -50%, 0)`)
 
@@ -96,50 +98,56 @@ function BannerAnimation() {
   const interpBigB = interpolate([st, xy], (o, xy) => `translate(${(xy[0] / 5) + 1100},${(xy[1] / 5) + 420 - o * 10}) scale(0.6)`)
 
   const onMove = useCallback(({ clientX: x, clientY: y }) => set({ xy: [x - window.innerWidth / 2, y - window.innerHeight / 2] }), [])
-  const onScroll = useCallback(e => set({ st: positionsStore.getViewportY() / 4 }), [])
+  const onScroll = useCallback(e => {
+    if ( (0.7 - (positionsStore.getViewportY() / 500)) < 0 ) {
+      set({ st: 350 })
+    } else {
+      set({ st: positionsStore.getViewportY() / 4 })
+    }
+  }, [])
 
   return (
-    <div class="banner-animation" onMouseMove={onMove} ref={viewportRef}>
+    <a.div class="banner-animation" 
+           onMouseMove={onMove} 
+           style={{
+                   filter: interpolate([st], (o) => `invert(${0.7 -(o / 500)})`)
+                 }}
+    >
 
+      <div className="background-color-underlay" ref={viewportRef}></div>
       <div className="onscroll-container">
-
-        <div className="container-max-width hero-banner-container">
-          <Hero />
-        </div>
 
         <a.svg className="svg-viewbox" width="100%" height="100%">
 
-          <div className="color-filter"></div>
-
-          <a.g className="animated-dev" transform={interpSmallA}>
+          <a.g className="banner-parallax-icons" transform={interpSmallA}>
             <image href={categDev} />
           </a.g>
-          <a.g className="animated-dev" transform={interpSmallB}>
+          <a.g className="banner-parallax-icons" transform={interpSmallB}>
             <image href={categDev} />
           </a.g>
-          <a.g className="animated-dev" transform={interpSmallC}>
+          <a.g className="banner-parallax-icons" transform={interpSmallC}>
             <image href={categVideo} />
           </a.g>
-          <a.g className="animated-dev" transform={interpSmallD}>
+          <a.g className="banner-parallax-icons" transform={interpSmallD}>
             <image href={categDesign} />
           </a.g>
-          <a.g className="animated-dev" transform={interpSmallE}>
+          <a.g className="banner-parallax-icons" transform={interpSmallE}>
             <image href={categPhoto} />
           </a.g>
-          <a.g className="animated-dev" transform={interpSmallF}>
+          <a.g className="banner-parallax-icons" transform={interpSmallF}>
             <image href={categDev} />
           </a.g>
-          <a.g className="animated-dev" transform={interpSmallG}>
+          <a.g className="banner-parallax-icons" transform={interpSmallG}>
             <image href={categDesign} />
           </a.g>
-          <a.g className="animated-dev" transform={interpSmallH}>
+          <a.g className="banner-parallax-icons" transform={interpSmallH}>
             <image href={categDev} />
           </a.g>
 
-          <a.g className="animated-dev" transform={interpBigA}>
+          <a.g className="banner-parallax-icons" transform={interpBigA}>
             <image href={categDev} />
           </a.g>
-          <a.g className="animated-dev" transform={interpBigB}>
+          <a.g className="banner-parallax-icons" transform={interpBigB}>
             <image href={categDesign} />
           </a.g>
 
@@ -147,7 +155,7 @@ function BannerAnimation() {
 
       </div>
 
-    </div>
+    </a.div>
   )
 }
 

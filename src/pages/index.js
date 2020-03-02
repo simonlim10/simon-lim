@@ -26,7 +26,11 @@ const IndexPage = () => (
 
     <BannerAnimation />
 
-    <div className="container-max-width">
+    <div className="container-max-width hero-banner-container">
+      <Hero />
+    </div>
+
+    <div className="container-max-width content-after-animation-banner">
 
       <div className="container-max-width py30">
         <HeroText chosenText="Here are my latest works." />
