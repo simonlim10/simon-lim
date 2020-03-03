@@ -95,12 +95,12 @@ function BannerAnimation() {
   const interpSmallH = interpolate([st, xy], (o, xy) => `translate(${(xy[0] / 25) + 500},${(xy[1] / 25) + 700 - o * 0.5}) scale(0.1)`)
 
   const interpBigA = interpolate([st, xy], (o, xy) => `translate(${(xy[0] / 5) + 50},${(xy[1] / 5) + 280 - o * 14}) scale(0.7)`)
-  const interpBigB = interpolate([st, xy], (o, xy) => `translate(${(xy[0] / 5) + 1100},${(xy[1] / 5) + 420 - o * 10}) scale(0.6)`)
+  const interpBigB = interpolate([st, xy], (o, xy) => `translate(${(xy[0] / 5) + 1050},${(xy[1] / 5) + 420 - o * 10}) scale(0.6)`)
 
   const onMove = useCallback(({ clientX: x, clientY: y }) => set({ xy: [x - window.innerWidth / 2, y - window.innerHeight / 2] }), [])
   const onScroll = useCallback(e => {
-    if ( (0.7 - (positionsStore.getViewportY() / 500)) < 0 ) {
-      set({ st: 350 })
+    if ( positionsStore.getViewportY() > 1200 ) {
+      set({ st: 210 })
     } else {
       set({ st: positionsStore.getViewportY() / 4 })
     }
@@ -110,7 +110,7 @@ function BannerAnimation() {
     <a.div class="banner-animation" 
            onMouseMove={onMove} 
            style={{
-                   filter: interpolate([st], (o) => `invert(${0.7 -(o / 500)})`)
+                   filter: interpolate([st], (o) => `invert(${0.7 -(o / 300)})`)
                  }}
     >
 
