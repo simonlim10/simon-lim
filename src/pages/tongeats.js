@@ -48,7 +48,7 @@ const Tongeats = () => (
 
       <Presentation presentationName="Tongeats" 
                     presentationType="Logo Design"
-                    presentationDescription="Designing a logo with a food and travel photoblog based in Manila." 
+                    presentationDescription="Designing a logo with a food and travel photoblog." 
                     presentationImage={TongeatsCollage} 
       />
 
@@ -57,14 +57,11 @@ const Tongeats = () => (
     <div className="clear-both" />
 
     <div className="inner-studies-fullwidth">
-      <CenterText centerHeading="Design Goal: Asian elements, with a fun modern feel"
+      <CenterText centerHeading="Design Goal: Food elements, with a fun modern feel"
                   centerContent={`The main design goal is to make a logo that's representative of the client's personality, and present it with a fun vibe to appeal to like minded people who also like food blogs.`}
                   centerContent2={`Upon the initial meeting with the client, I facilitated a simple interview to get to know them, and to help them express what they wanted in the design. I would research for pegs of logos and design elements of how I visualize the logo should be. After some more discussions, I was then was able to create the initial look and feel.`}
       />
     </div>
-
-    <Studies studiesList={TongeatsStudies}
-    />
 
     <div className="container-max-width">
 

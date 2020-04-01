@@ -215,7 +215,7 @@ const Learntalk = () => (
 
       <Presentation presentationName="Learntalk" 
                     presentationType="Web UI / Design"
-                    presentationDescription="My work with a startup online English learning platform that focuses on providing the best lessons from professional native-speaking English teachers all over the world." 
+                    presentationDescription="Selected works with a startup online English learning platform that focuses on providing the best lessons from professional native-speaking English teachers all over the world." 
                     presentationImage={LearntalkLogo} 
       />
 
@@ -231,7 +231,7 @@ const Learntalk = () => (
       <ColorPalette colorList={LearntalkColors} />
 
       <VideoPresentation  videoHeading="Video Walkthrough"
-                          videoContent="This is the main walkthrough, designed to give first time users a quick and sufficient idea what they can do in the dashboard."
+                          videoContent="Gives first time users a quick idea of what they can do in the dashboard."
                           videoPoster="images/learntalk/video-thumb.jpg"
                           videoUrl={WalkthroughVideo}
       />

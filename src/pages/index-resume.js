@@ -30,25 +30,6 @@ const IndexResume = () => (
       
       <Hero />
 
-      <div className="categories">
-        <Category categoryName="Development" 
-                  categoryLink="dev" 
-                  categoryImage={categDev} 
-        />
-        <Category categoryName="Design & Identity" 
-                  categoryLink="design" 
-                  categoryImage={categDesign} 
-        />
-        <Category categoryName="Video & Animation" 
-                  categoryLink="video" 
-                  categoryImage={categVideo} 
-        />
-        <Category categoryName="Photography" 
-                  categoryLink="photo" 
-                  categoryImage={categPhoto} 
-        />
-      </div>
-
       <Resume />
 
       <div className="container-max-width page-fill py30">

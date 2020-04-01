@@ -51,9 +51,9 @@ const IndexPage = () => (
         />
       </div>
 
-      <Resume />
-
       <Suggestions currentPage="Here are some of my other works." />
+
+      <Resume />
 
     </div>
     

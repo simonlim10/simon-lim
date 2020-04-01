@@ -194,8 +194,8 @@ h5 {
 /* NAV elements styling */ 
 
 .nav {
-  height: 80px;
-  max-height: 80px;
+  height: 76px;
+  max-height: 76px;
 
   .navbar {
     height: 76px;
@@ -1174,7 +1174,7 @@ $resume-info-breakpoint: 680px; // unique breakpoint for .resume-info
       transition: 0.2s;
 
       & .suggestion-icon {
-        filter: grayscale(0%) contrast(100%);
+        filter: brightness(115%);
         transition: 0.3s;
       }
     }
@@ -1183,7 +1183,7 @@ $resume-info-breakpoint: 680px; // unique breakpoint for .resume-info
       height: 74px;
       margin: 10px 18px 15px 12px;
       
-      filter: grayscale(100%) contrast(0%) brightness(140%);
+      filter: brightness(100%);
       transition: 0.3s;
 
       display: flex;
@@ -2393,7 +2393,7 @@ svg.svg-viewbox {
 }
 
 
-// /* styles for RESUME PDF generation */
+/* styles for RESUME PDF generation */
 
 // .lean-right {
 //   text-align: right;
@@ -2421,14 +2421,26 @@ svg.svg-viewbox {
 // }
 
 
+
 // .hero-banner-custom {
 //   height: auto;
 //   margin-top: 0px;
 //   min-height: 170px;
 // }
-// .hero-body {
-//   padding: 1.5rem 1.5rem;
+
+// .hero-highlight {
+//   background-color: #eee;
+//   background-color: #828282;
+//   color: #595959;
+//   color: #fff;
 // }
+// .hero-banner-custom h1.title {
+//   color: #595959;
+// }
+// .hero-body {
+//   padding: 3rem 1.5rem;
+// }
+
 
 
 // .categories {
@@ -2486,4 +2498,81 @@ svg.svg-viewbox {
 //   height: 160px;
 //   padding-bottom: 100px;
 // }
+
+
+// // /* styles for COVER LETTER PDF generation */
+
+// .container > .navbar .navbar-brand, .navbar > .container .navbar-brand {
+//     margin-left: 0;
+//   }
+
+// .hero-banner-container {
+//   height: 210px;
+//   margin-bottom: 0px;
+// }
+
+
+// .banner-animation {
+//   filter: invert(0) !important;
+// }
+
+// svg.svg-viewbox {
+//   opacity: 0.3;
+//   top: -50px;
+//   height: 10px;
+// }
+
+// .hero-highlight {
+//   background-color: #eee;
+//   background-color: #a9a9a9;
+//   color: #595959;
+//   color: #fff;
+// } 
+
+// .hero-banner-custom h1.title {
+//   color: #fff;
+//   color: #666;
+// }
+
+// .container-max-width.hero-banner-container {
+//   // max-width: 780px;
+// }
+// .resume-container {
+//   max-width: 660px;
+//   z-index: 1000;
+//   position: relative;
+
+//   font-size: 14px;
+//   line-height: 20px;
+// }
+
+// .container-max-width.page-fill.py30 {
+// padding-top: 60px;
+// }
+
+// a .featured-work {
+//     height: 260px;
+//     max-width: 730px;
+//     margin: 0 auto;
+//   }
+
+// a .featured-work .featured-work-info .featured-work-title .featured-work-icon {
+//     height: 50px;
+//   }
+
+// a .featured-work .featured-work-info h5 {
+//     font-size: 14px;
+//     margin-bottom: 0px;
+//   }
+
+// a .featured-work .featured-work-info .featured-work-link h4 {
+//     margin-top: 16px;
+//     font-size: 14px;
+//   }
+
+// footer {
+//     max-width: 730px;
+//     padding-top: 0px;
+//     padding-bottom: 80px;
+//   }
 
