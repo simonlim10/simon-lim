@@ -51,7 +51,6 @@ function BannerAnimation() {
     ({ currPos }) => {
       positionsStore.setViewportPosition(currPos);
       onScroll();
-      console.log("zaz st.value: " + `${(0.7 - (st.value / 500))}` );
     },
     [positionsStore],
     null,
@@ -90,9 +89,9 @@ function BannerAnimation() {
   const interpSmallC = interpolate([st, xy], (o, xy) => `translate(${(xy[0] / 5) + 1000},${(xy[1] / 5) + 130 - o * 5}) scale(0.4)`)
   const interpSmallD = interpolate([st, xy], (o, xy) => `translate(${(xy[0] / 14) + 450},${(xy[1] / 14) + 170 - o * 2.5}) scale(0.2)`)
   const interpSmallE = interpolate([st, xy], (o, xy) => `translate(${(xy[0] / 10) + 700},${(xy[1] / 10) + 300 - o * 4}) scale(0.3)`)
-  const interpSmallF = interpolate([st, xy], (o, xy) => `translate(${(xy[0] / 14) + 50},${(xy[1] / 14) + 550 - o * 2.5}) scale(0.2)`)
-  const interpSmallG = interpolate([st, xy], (o, xy) => `translate(${(xy[0] / 14) + 750},${(xy[1] / 14) + 650 - o * 2.5}) scale(0.2)`)
-  const interpSmallH = interpolate([st, xy], (o, xy) => `translate(${(xy[0] / 25) + 500},${(xy[1] / 25) + 700 - o * 0.5}) scale(0.1)`)
+  const interpSmallF = interpolate([st, xy], (o, xy) => `translate(${(xy[0] / 14) + 50},${(xy[1] / 14) + 610 - o * 2.5}) scale(0.2)`)
+  const interpSmallG = interpolate([st, xy], (o, xy) => `translate(${(xy[0] / 14) + 750},${(xy[1] / 14) + 790 - o * 2.5}) scale(0.2)`)
+  const interpSmallH = interpolate([st, xy], (o, xy) => `translate(${(xy[0] / 25) + 500},${(xy[1] / 25) + 800 - o * 0.5}) scale(0.1)`)
 
   const interpBigA = interpolate([st, xy], (o, xy) => `translate(${(xy[0] / 5) + 50},${(xy[1] / 5) + 280 - o * 14}) scale(0.7)`)
   const interpBigB = interpolate([st, xy], (o, xy) => `translate(${(xy[0] / 5) + 1050},${(xy[1] / 5) + 420 - o * 10}) scale(0.6)`)
