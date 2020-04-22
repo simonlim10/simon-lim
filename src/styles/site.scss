@@ -63,11 +63,11 @@ body {
 }
 
 .hero-highlight {
-  padding: 1px 9px;
+  padding: 3px 11px;
   margin-bottom: 4px;
-  background-color: $div-light-white;
+  background-color: $div-grey;
   border-radius: 3px;
-  color: $text-darkest-grey;
+  color: $text-white;
 }
 
 .container-max-width {
@@ -1513,11 +1513,11 @@ $resume-info-breakpoint: 680px; // unique breakpoint for .resume-info
 
     float: right;
 
-    opacity: 0.8;
-    transition: 0.2s;
-
     font-size: 26px;
     color: #aaa;
+
+    opacity: 0.8;
+    transition: 0.2s;
     
     animation: bouncearrow 2.5s infinite;
 
@@ -2343,6 +2343,45 @@ header.nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.scroll-indicator {
+  height: 30px;
+  width: 30px;
+  margin: 5px auto 0 auto;
+
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+
+  font-size: 26px;
+  color: $text-white;
+
+  opacity: 0.8;
+  transition: 0.2s;
+  
+  animation: bouncearrow 2.5s infinite;
+}
+@keyframes bouncearrow {
+  0% {
+    opacity: 0;
+    bottom: 60px;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    bottom: 30px;
+  }
+  75% {
+    bottom: 30px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 30px;
+    opacity: 0;
+  }
 }
 
 // .color-filter {
