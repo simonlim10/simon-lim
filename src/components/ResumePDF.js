@@ -13,6 +13,7 @@ const Resume = ({ presentationName }) => (
       <img src="/images/image-simon.png" />
       <div>
         <h1>Simon Lim </h1>
+        
         <h3 className="tagline">Let's make the complicated simple.</h3>
         <p>
           Has an extensive background in different mediums of design. Strong skill in developing clear and precise interfaces with usability in mind, for web platforms with wide userbases.
