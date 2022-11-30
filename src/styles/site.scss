@@ -68,6 +68,7 @@ body {
   background-color: $div-light-grey;
   border-radius: 3px;
   color: $text-white;
+  margin-right: 8px;
 }
 
 .container-max-width {
@@ -2566,6 +2567,7 @@ svg.svg-viewbox {
 //   background-color: #a9a9a9;
 //   color: #595959;
 //   color: #fff;
+//   margin-right: 18px;
 // } 
 
 // .hero-banner-custom h1.title {
@@ -2615,3 +2617,34 @@ svg.svg-viewbox {
 //     padding-bottom: 80px;
 //   }
 
+//   .scroll-indicator {
+//    display: none;
+//   }
+
+// // //adjust header centering, to center it visually because auto-center doesn't take visual into account
+// //   .column {
+// //     padding: 0.75rem;
+// //     padding-left: 1.5rem;
+// //   }
+
+// // .is-size-1-desktop {
+// //     font-size: 2.6rem !important;
+// //   }
+
+
+
+// // for screenshotting the banner
+// .container-max-width {
+//   max-width: 810px;
+//   width: 100%;
+//   margin: 30px auto 0 50px;
+//   overflow: hidden;
+// }
+
+// .navbar-item {
+//   display: none;
+// }
+
+// .hero-highlight {
+//   margin-right: 18px;
+// }

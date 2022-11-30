@@ -222,7 +222,7 @@ const Learntalk = () => (
     </div>
 
     <CenterText centerHeading="Design Goals: To present studying English as a fun experience"
-                centerContent={`Usually, studying is correlated with long hours of reading and learning that requires your full focus and energy, and can seem a tiring and gruelling task which may discourage people. We designed the core of the platform's approach to be fun and friendly, so to make users feel that studying English is enjoyable.`}
+                centerContent={`Usually, studying is correlated with long hours of reading and learning that requires your full focus and energy, and can seem a tiring task which may discourage people. We designed the core of the platform's style and approach to be fun and friendly, to let users feel that studying English is enjoyable.`}
                 centerContent2={``}
     />
 
@@ -231,7 +231,7 @@ const Learntalk = () => (
       <ColorPalette colorList={LearntalkColors} />
 
       <VideoPresentation  videoHeading="Video Walkthrough"
-                          videoContent="Gives first time users a quick idea of what they can do in the dashboard."
+                          videoContent="Gives first time users a quick idea of what they can do in the dashboard. Preparing graphical assets and video editing with Adobe After Effects is done by me."
                           videoPoster="images/learntalk/video-thumb.jpg"
                           videoUrl={WalkthroughVideo}
       />
@@ -244,14 +244,14 @@ const Learntalk = () => (
       />
 
       <GallerySec discussHeading="Chart Design"
-                  discussContent={`Due to how English can get very complex to teach, we wanted to simplify it into lesson steps for users. \n Turning info into visuals help people absorb it easier.`}
+                  discussContent={`Due to how English can get very complex to teach, we wanted to simplify it into lesson steps for users. \n Turning that hard info into intuitive visuals help people absorb concepts and ideas easier.`}
                   discussContent2={`In this case, we create designs to show how a True Beginner (like a child) would progress into English fluency.`}
                   discussImage={KidsImages}
                   ImageSide="right"
       />
 
       <GallerySec discussHeading="Checkout & Other Forms"
-                  discussContent={`Incorporating friendly elements into the checkout form would help create less tension or nervousness around payment process. Also, we don't leave out the standard elements that are important, that users look out for.`}
+                  discussContent={`Incorporating friendly elements into the checkout form would help create less tension or nervousness around the payment process, while still keeping the standard elements that are important, that users look out for.`}
                   discussImage={CheckoutImages}
                   ImageSide="left"
       />

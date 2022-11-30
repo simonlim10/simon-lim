@@ -14,32 +14,32 @@ const Suggestions = ({ currentPage }) => (
       <SuggestionCard cardName="Learntalk"
                       cardType="UI Dev. & Design"
                       cardImage="/images/jobs/job-learntalk.png"
-                      cardLink="learntalk"
+                      cardLink="/learntalk"
       />
       <SuggestionCard cardName="UnPhone" 
                       cardType="App Design"
                       cardImage="/images/jobs/job-unphone.png"
-                      cardLink="unphone" 
+                      cardLink="/unphone" 
       />
       <SuggestionCard cardName="UNITAN" 
                       cardType="Corporate Identity"
                       cardImage="/images/jobs/job-unitan.png"
-                      cardLink="unitan" 
+                      cardLink="/unitan" 
       />
       <SuggestionCard cardName="KinmoPW" 
                       cardType="Graphic Design"
                       cardImage="/images/jobs/job-kinmopw.png"
-                      cardLink="kinmopw" 
+                      cardLink="/kinmopw" 
       />
       <SuggestionCard cardName="Troika" 
                       cardType="Brand Design"
                       cardImage="/images/jobs/job-troika.png"
-                      cardLink="troika"
+                      cardLink="/troika"
       />
       <SuggestionCard cardName="Tongeats" 
                       cardType="Logo Design"
                       cardImage="/images/jobs/job-tongeats.png"
-                      cardLink="tongeats" 
+                      cardLink="/tongeats" 
       />
     </div>
   </React.Fragment>

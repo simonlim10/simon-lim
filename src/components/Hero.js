@@ -12,7 +12,7 @@ const Hero = ({ siteTitle }) => (
           <div className="columns is-centered">
             <div className="column">
               <h1 className="title hero-custom-text is-spaced is-size-1-desktop is-size-2-tablet is-size-2-mobile">
-                <span className="hero-highlight">Hello world!</span> I’m Simon Lim, 
+                <span className="hero-highlight">Hello, World!</span>I’m Simon Lim, 
                 a front-end web developer and designer.  
               </h1>
             </div>
